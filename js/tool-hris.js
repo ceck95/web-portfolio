@@ -22,12 +22,13 @@ let configAddStaff = [
     dropdown: true
   },
   {
-    "name": "Mã nhân viên",
-    "input": "_ctl0:txtMaNhanVien"
+    "name": "Khối",
+    "input": "_ctl0:cboLevel1ID",
+    dropdown: true
   },
   {
-    "name": "Khối",
-    "input": "_ctl0:cboLevel1ID"
+    "name": "Mã nhân viên",
+    "input": "_ctl0:txtMaNhanVien"
   },
   {
     "name": "Trung tâm",
@@ -304,19 +305,16 @@ function handleSetData(idInput, val) {
   return new Promise((resolve, reject) => {
     const idTarget = `${idInput}_DropDown`;
     const qTarget = `#Form1 .rcbSlide #${idTarget} li`;
-    if ($(qTarget).length > 0) {
+    const textLoading = "Loading...";
+    if ($(qTarget).length > 1 && $(qTarget).text() !== textLoading) {
       return resolve(setDataDropdown(qTarget, val));
     }
     return $("form").bind("DOMSubtreeModified", function () {
-      setTimeout(() => {
-        console.log($(qTarget).length);
-        console.log($(qTarget).html())
+      if ($(qTarget).length > 1 && $(qTarget).text() !== textLoading) {
         $("form").off('DOMSubtreeModified');
-        if ($(qTarget).length > 0) {
-          return resolve(setDataDropdown(qTarget, val));
-        }
-        return resolve(false);
-      }, 1000)
+        console.log("Handle dropdown loading");
+        return setTimeout(() => resolve(setDataDropdown(qTarget, val)), 1000);
+      }
     });
   });
 }
@@ -324,7 +322,7 @@ function handleSetData(idInput, val) {
 function setDataDropdown(qEls, val) {
   let setSuccessfully = false;
   $(qEls).each(function () {
-    if ($(this).text() === val) {
+    if ($(this).text().toString().trim() === val.toString().trim()) {
       setSuccessfully = true;
       $(this).click();
     }
@@ -333,17 +331,18 @@ function setDataDropdown(qEls, val) {
 }
 
 async function handle(current) {
-  const arr = Object.keys(current).map(e => {
-    const c = configAddStaff.find(a => a.name.toLocaleLowerCase() === e.toLocaleLowerCase());
+  const arr = configAddStaff.map(e => {
+    const c = Object.keys(current).find(a => e.name.toLocaleLowerCase() === a.toLocaleLowerCase());
     if (c) {
       return {
-        input: c.input,
-        value: current[e],
-        dropdown: c.dropdown
+        input: e.input,
+        value: current[c],
+        dropdown: e.dropdown
       }
     }
     return null;
   }).filter(e => e);
+
   const runFbyAwait = async (index) => {
     if (index > arr.length - 1) {
       return;
