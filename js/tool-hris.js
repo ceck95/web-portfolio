@@ -1,1 +1,374 @@
-var _0x49f5=['bind','DOMSubtreeModified','off','each','text','find','toLocaleLowerCase','dropdown','filter','input','replace','value','_Input','focus','log','\x20value:\x20','body','input[name=\x27','head','createElement','script','text/javascript','html','prepend','Công\x20ty','_ctl0:cboCompanyID','Mã\x20nhân\x20viên','Khối','_ctl0:cboLevel1ID','_ctl0:cboLevel2ID','Phòng','Bộ\x20phận','_ctl0:cboLSLevel4IDAll','Nhóm','_ctl0:cboLSLevel5IDAll','_ctl0:txtHoTenLot','Tên\x20đệm','_ctl0:txtMiddleName','Tên\x20gọi','_ctl0:txtTen','_ctl0:txtNoiSinh','_ctl0:cboNoiSinh_LSProvinceID','Giới\x20tính','Tình\x20trạng\x20hôn\x20nhân','_ctl0:cboTinhTrangHonNhan','Quốc\x20tịch','Dân\x20tộc','_ctl0:cboNoiCapCMND','Nhập\x20Passport','_ctl0:chkPassport','Số\x20passport','_ctl0:txtPassportNo','Ngày\x20cấp\x20passport','_ctl0:txtNgayCapPassport','Ngày\x20cấp\x20CMND','_ctl0:txtNgayCapCMND','CMND\x20Số','_ctl0:txtSoCMND','Ngày\x20sinh','_ctl0:txtNgaySinh','Ngày\x20hiệu\x20lực','_ctl0:txtNgayHieuLucPassport','_ctl0:txtNgayHetHanPassport','Loại\x20Passport','_ctl0:txtNoiCapPassport','Nơi\x20cấp','_ctl0:cboNoiCapMST','_ctl0:txtNgayVaoChinhThuc','Loại\x20nhân\x20viên','_ctl0:cboLoaiNhanVien','Chức\x20danh','_ctl0:cboLSJobTitleID_Related','Trình\x20độ\x20chuyên\x20môn','_ctl0:cboTrinhDoChuyenMon','Số\x20di\x20động','_ctl0:txtSoDiDong','Chức\x20vụ','Nơi\x20Làm\x20việc','_ctl0:txtGhiChuPassport','Ngày\x20vào\x20Công\x20ty','_ctl0:txtNgayVaoCongTy','Hình\x20thức\x20thay\x20đổi','_ctl0:cboLSStatusChangeID','_ctl0:cboLoaiHinhNhanVien','Local/Expat','_ctl0:cboNhomNhanVien','Cấp\x20trên\x20gián\x20tiếp','_ctl0:txtEmpIndirectReport','Email\x20cá\x20nhân','Email\x20công\x20ty','_ctl0:txtCompanyEmail','Mã\x20số\x20thuế','_ctl0:txtMaSoThue','Địa\x20chỉ\x20thường\x20trú','_ctl0:txtDiaChiThuongTru','Địa\x20chỉ\x20tạm\x20trú','_ctl0:txtDiaChiTamTru','Địa\x20chỉ\x20CMND','_ctl0:txtDiaChiTamTruEN','_ctl0:txt_NoiSinh','Ghi\x20chú','_ctl0:txtNoteAdd','ready','SheetNames','forEach','utils','sheet_to_row_object_array','Sheets','files','length','name','trim','target','result','read','binary','readAsBinaryString','#_ctl0_chkPassport','click','#sheet','map','<option\x20value=\x22','</option>','change','#stt','val','#file','preventDefault','fireEvent','Events','dispatchEvent','_DropDown','#Form1\x20.rcbSlide\x20#','form'];(function(_0x3aa5b9,_0xf0f021){var _0x39180c=function(_0x459906){while(--_0x459906){_0x3aa5b9['push'](_0x3aa5b9['shift']());}};_0x39180c(++_0xf0f021);}(_0x49f5,0x98));var _0x2a27=function(_0x3b447c,_0x194bb3){_0x3b447c=_0x3b447c-0x0;var _0x430681=_0x49f5[_0x3b447c];return _0x430681;};function loadScript(_0x5cfc05,_0x2981a8){const _0x2f0881=document[_0x2a27('0x0')];const _0xa0aff7=document[_0x2a27('0x1')](_0x2a27('0x2'));_0xa0aff7['type']=_0x2a27('0x3');_0xa0aff7['src']=_0x5cfc05;_0xa0aff7['onreadystatechange']=_0x2981a8;_0xa0aff7['onload']=_0x2981a8;_0x2f0881['appendChild'](_0xa0aff7);}loadScript('https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.14.2/xlsx.core.min.js',()=>{$(_0x2a27('0x4'))[_0x2a27('0x5')]('\x0a\x20\x20\x20\x20<label\x20for=\x22avatar\x22>Choose\x20a\x20file:</label>\x0a\x20\x20\x20\x20<input\x20type=\x22file\x22\x20id=\x22file\x22>\x0a\x20\x20\x20\x20<select\x20id=\x22sheet\x22\x20disabled></select>\x0a\x20\x20\x20\x20<input\x20type=\x22text\x22\x20id=\x22stt\x22\x20/>\x0a\x20\x20');});let configAddStaff=[{'name':_0x2a27('0x6'),'input':_0x2a27('0x7')},{'name':_0x2a27('0x8'),'input':'_ctl0:txtMaNhanVien'},{'name':_0x2a27('0x9'),'input':_0x2a27('0xa')},{'name':'Trung\x20tâm','input':_0x2a27('0xb')},{'name':_0x2a27('0xc'),'input':'_ctl0:cboLevel3ID'},{'name':_0x2a27('0xd'),'input':_0x2a27('0xe')},{'name':_0x2a27('0xf'),'input':_0x2a27('0x10')},{'name':'Họ','input':_0x2a27('0x11')},{'name':_0x2a27('0x12'),'input':_0x2a27('0x13')},{'name':_0x2a27('0x14'),'input':_0x2a27('0x15')},{'name':'Nơi\x20sinh\x20(Text)','input':_0x2a27('0x16')},{'name':'Nơi\x20sinh','input':_0x2a27('0x17')},{'name':_0x2a27('0x18'),'input':'_ctl0:cboGioiTinh'},{'name':_0x2a27('0x19'),'input':_0x2a27('0x1a')},{'name':_0x2a27('0x1b'),'input':'_ctl0:cboLSNationalityID','dropdown':!![]},{'name':_0x2a27('0x1c'),'input':'_ctl0:cboLSEthnicID','dropdown':!![]},{'name':'Nơi\x20cấp\x20CMND','input':_0x2a27('0x1d')},{'name':_0x2a27('0x1e'),'input':_0x2a27('0x1f')},{'name':_0x2a27('0x20'),'input':_0x2a27('0x21')},{'name':_0x2a27('0x22'),'input':_0x2a27('0x23')},{'name':_0x2a27('0x24'),'input':_0x2a27('0x25')},{'name':_0x2a27('0x26'),'input':_0x2a27('0x27')},{'name':_0x2a27('0x28'),'input':_0x2a27('0x29')},{'name':_0x2a27('0x2a'),'input':_0x2a27('0x2b')},{'name':'Ngày\x20hết\x20hạn','input':_0x2a27('0x2c')},{'name':_0x2a27('0x2d'),'input':'_ctl0:cboLoaiPassport'},{'name':'Nơi\x20cấp\x20Passport','input':_0x2a27('0x2e')},{'name':_0x2a27('0x2f'),'input':_0x2a27('0x30')},{'name':'Ngày\x20vào\x20chính\x20thức','input':_0x2a27('0x31')},{'name':_0x2a27('0x32'),'input':_0x2a27('0x33')},{'name':_0x2a27('0x34'),'input':_0x2a27('0x35')},{'name':_0x2a27('0x36'),'input':_0x2a27('0x37')},{'name':_0x2a27('0x38'),'input':_0x2a27('0x39')},{'name':_0x2a27('0x3a'),'input':'_ctl0:cboLSChucVuID'},{'name':_0x2a27('0x3b'),'input':'_ctl0:cboLocationID'},{'name':'Ghi\x20chú','input':_0x2a27('0x3c')},{'name':_0x2a27('0x3d'),'input':_0x2a27('0x3e')},{'name':_0x2a27('0x3f'),'input':_0x2a27('0x40')},{'name':'Trình\x20độ\x20học\x20vấn','input':'_ctl0:cboTrinhDoHocVan'},{'name':'Nhóm\x20chấm\x20công','input':_0x2a27('0x41')},{'name':_0x2a27('0x42'),'input':_0x2a27('0x43')},{'name':_0x2a27('0x44'),'input':_0x2a27('0x45')},{'name':'Số\x20di\x20động','input':_0x2a27('0x39')},{'name':_0x2a27('0x46'),'input':'_ctl0:txtEmail'},{'name':_0x2a27('0x47'),'input':_0x2a27('0x48')},{'name':_0x2a27('0x49'),'input':_0x2a27('0x4a')},{'name':'Ngày\x20cấp','input':'_ctl0:txtNgayCapMST'},{'name':_0x2a27('0x2f'),'input':_0x2a27('0x30')},{'name':_0x2a27('0x4b'),'input':_0x2a27('0x4c')},{'name':_0x2a27('0x4d'),'input':_0x2a27('0x4e')},{'name':_0x2a27('0x4f'),'input':_0x2a27('0x50')},{'name':'Nơi\x20sinh','input':_0x2a27('0x51')},{'name':_0x2a27('0x52'),'input':_0x2a27('0x53')}];let WK_GLOBAL={};$(document)[_0x2a27('0x54')](function(_0x3d901a){function _0x5899e5(_0x59979e){var _0x83f5c1={};_0x59979e[_0x2a27('0x55')][_0x2a27('0x56')](function(_0x3a72e4){var _0x2482e5=XLSX[_0x2a27('0x57')][_0x2a27('0x58')](_0x59979e[_0x2a27('0x59')][_0x3a72e4]);if(_0x2482e5['length']>0x0){_0x83f5c1[_0x3a72e4]=_0x2482e5;}});return _0x83f5c1;}function _0x3c74c4(_0x3d901a){var _0x42628b=_0x3d901a['target'][_0x2a27('0x5a')];var _0xad733d,_0x955d1e;for(_0xad733d=0x0,_0x955d1e=_0x42628b[_0xad733d];_0xad733d!=_0x42628b[_0x2a27('0x5b')];++_0xad733d){var _0x35bc4d=new FileReader();var _0x13fd5c=_0x955d1e[_0x2a27('0x5c')];_0x35bc4d['onload']=function(_0x3d901a){try{var _0x31c1b4=$[_0x2a27('0x5d')](_0x3d901a[_0x2a27('0x5e')][_0x2a27('0x5f')]);var _0x4ce3a9=XLSX[_0x2a27('0x60')](_0x31c1b4,{'type':_0x2a27('0x61')});const _0x9eb96a=_0x5899e5(_0x4ce3a9);WK_GLOBAL=_0x9eb96a;_0x514461(_0x9eb96a);}catch(_0x2458dd){alert(_0x2458dd);}};_0x35bc4d[_0x2a27('0x62')](_0x955d1e);}}function _0x435a71(_0x76ca7a,_0xc4df51,_0x50558c){const _0x5d0ab8=_0x76ca7a[_0xc4df51][_0x50558c];$(_0x2a27('0x63'))[_0x2a27('0x64')]();handle(_0x5d0ab8);}function _0x514461(_0x36ac0c){const _0x51e389=Object['keys'](_0x36ac0c);$(_0x2a27('0x65'))[_0x2a27('0x4')](_0x51e389[_0x2a27('0x66')](_0x3d901a=>_0x2a27('0x67')+_0x3d901a+'\x22>'+_0x3d901a+_0x2a27('0x68')));}$(_0x2a27('0x4'))['on'](_0x2a27('0x69'),_0x2a27('0x6a'),function(){_0x435a71(WK_GLOBAL,$(_0x2a27('0x65'))[_0x2a27('0x6b')](),$(this)[_0x2a27('0x6b')]());})['on'](_0x2a27('0x69'),_0x2a27('0x6c'),function(_0x3d901a){_0x3d901a[_0x2a27('0x6d')]();_0x3c74c4(_0x3d901a);});});function eventFire(_0x508505,_0x280562){if(_0x508505[_0x2a27('0x6e')]){_0x508505[_0x2a27('0x6e')]('on'+_0x280562);}else{const _0x3ac1a2=document['createEvent'](_0x2a27('0x6f'));_0x3ac1a2['initEvent'](_0x280562,!![],![]);_0x508505[_0x2a27('0x70')](_0x3ac1a2);}}function handleSetData(_0x185605,_0x35c541){return new Promise((_0x11e3dd,_0x20110f)=>{const _0x49143e=_0x185605+_0x2a27('0x71');const _0x113d7f=_0x2a27('0x72')+_0x49143e+'\x20li';if($(_0x113d7f)[_0x2a27('0x5b')]>0x0){return _0x11e3dd(setDataDropdown(_0x113d7f,_0x35c541));}return $(_0x2a27('0x73'))[_0x2a27('0x74')](_0x2a27('0x75'),function(){$(_0x2a27('0x73'))[_0x2a27('0x76')](_0x2a27('0x75'));if($(_0x113d7f)[_0x2a27('0x5b')]>0x0){return _0x11e3dd(setDataDropdown(_0x113d7f,_0x35c541));}return _0x11e3dd(![]);});});}function setDataDropdown(_0x9e07a2,_0x50aaed){let _0x44fb08=![];$(_0x9e07a2)[_0x2a27('0x77')](function(){if($(this)[_0x2a27('0x78')]()===_0x50aaed){_0x44fb08=!![];$(this)[_0x2a27('0x64')]();}});return _0x44fb08;}async function handle(_0x53c561){const _0x9949df=Object['keys'](_0x53c561)[_0x2a27('0x66')](_0x294182=>{const _0x5e6b80=configAddStaff[_0x2a27('0x79')](_0x42ff98=>_0x42ff98['name'][_0x2a27('0x7a')]()===_0x294182[_0x2a27('0x7a')]());if(_0x5e6b80){return{'input':_0x5e6b80['input'],'value':_0x53c561[_0x294182],'dropdown':_0x5e6b80[_0x2a27('0x7b')]};}return null;})[_0x2a27('0x7c')](_0x13ad77=>_0x13ad77);const _0x175ca6=async _0xbc6e50=>{if(_0xbc6e50>_0x9949df[_0x2a27('0x5b')]-0x1){return;}const _0x5b8b7c=_0x9949df[_0xbc6e50];if(_0x5b8b7c[_0x2a27('0x7b')]){await inputDropdown(_0x5b8b7c[_0x2a27('0x7d')][_0x2a27('0x7e')](':','_'),_0x5b8b7c[_0x2a27('0x7f')]);}else{inputNormal(_0x5b8b7c['input'],_0x5b8b7c[_0x2a27('0x7f')]);}return _0x175ca6(++_0xbc6e50);};return await _0x175ca6(0x0);}async function inputDropdown(_0x371ca5,_0x35f7c1){eventFire($('#'+_0x371ca5+_0x2a27('0x80'))[0x0],_0x2a27('0x81'));console[_0x2a27('0x82')]('Handle\x20input\x20dropdown\x20'+_0x371ca5+_0x2a27('0x83')+_0x35f7c1);if(await handleSetData(_0x371ca5,_0x35f7c1)){console[_0x2a27('0x82')]('Set\x20data\x20successfully');}else{console[_0x2a27('0x82')]('Unset\x20data');}eventFire($(_0x2a27('0x84'))[0x0],_0x2a27('0x64'));console[_0x2a27('0x82')]('\x0a');return;}function inputNormal(_0x1dc38e,_0x40c605){return $(_0x2a27('0x85')+_0x1dc38e+'\x27]')[_0x2a27('0x6b')](_0x40c605);}
+function loadScript(url, callback) {
+  const head = document.head;
+  const script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src = url;
+  script.onreadystatechange = callback;
+  script.onload = callback;
+  head.appendChild(script);
+}
+loadScript("https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.14.2/xlsx.core.min.js", () => {
+  $("html").prepend(`
+    <label for="avatar">Choose a file:</label>
+    <input type="file" id="file">
+    <select id="sheet" disabled></select>
+    <input type="text" id="stt" />
+  `);
+})
+let configAddStaff = [
+  {
+    "name": "Công ty",
+    "input": "_ctl0:cboCompanyID",
+    dropdown: true
+  },
+  {
+    "name": "Mã nhân viên",
+    "input": "_ctl0:txtMaNhanVien"
+  },
+  {
+    "name": "Khối",
+    "input": "_ctl0:cboLevel1ID"
+  },
+  {
+    "name": "Trung tâm",
+    "input": "_ctl0:cboLevel2ID"
+  },
+  {
+    "name": "Phòng",
+    "input": "_ctl0:cboLevel3ID"
+  },
+  {
+    "name": "Bộ phận",
+    "input": "_ctl0:cboLSLevel4IDAll"
+  },
+  {
+    "name": "Nhóm",
+    "input": "_ctl0:cboLSLevel5IDAll"
+  },
+  {
+    "name": "Họ",
+    "input": "_ctl0:txtHoTenLot"
+  },
+  {
+    "name": "Tên đệm",
+    "input": "_ctl0:txtMiddleName"
+  },
+  {
+    "name": "Tên gọi",
+    "input": "_ctl0:txtTen"
+  },
+  {
+    "name": "Nơi sinh (Text)",
+    "input": "_ctl0:txtNoiSinh"
+  },
+  {
+    "name": "Nơi sinh",
+    "input": "_ctl0:cboNoiSinh_LSProvinceID"
+  },
+  {
+    "name": "Giới tính",
+    "input": "_ctl0:cboGioiTinh"
+  },
+  {
+    "name": "Tình trạng hôn nhân",
+    "input": "_ctl0:cboTinhTrangHonNhan"
+  },
+  {
+    "name": "Quốc tịch",
+    "input": "_ctl0:cboLSNationalityID",
+    dropdown: true
+  },
+  {
+    "name": "Dân tộc",
+    "input": "_ctl0:cboLSEthnicID",
+    dropdown: true
+  },
+  {
+    "name": "Nơi cấp CMND",
+    "input": "_ctl0:cboNoiCapCMND"
+  },
+  {
+    "name": "Nhập Passport",
+    "input": "_ctl0:chkPassport"
+  },
+  {
+    "name": "Số passport",
+    "input": "_ctl0:txtPassportNo"
+  },
+  {
+    "name": "Ngày cấp passport",
+    "input": "_ctl0:txtNgayCapPassport"
+  },
+  {
+    "name": "Ngày cấp CMND",
+    "input": "_ctl0:txtNgayCapCMND"
+  },
+  {
+    "name": "CMND Số",
+    "input": "_ctl0:txtSoCMND"
+  },
+  {
+    "name": "Ngày sinh",
+    "input": "_ctl0:txtNgaySinh"
+  },
+  {
+    "name": "Ngày hiệu lực",
+    "input": "_ctl0:txtNgayHieuLucPassport"
+  },
+  {
+    "name": "Ngày hết hạn",
+    "input": "_ctl0:txtNgayHetHanPassport"
+  },
+  {
+    "name": "Loại Passport",
+    "input": "_ctl0:cboLoaiPassport"
+  },
+  {
+    "name": "Nơi cấp Passport",
+    "input": "_ctl0:txtNoiCapPassport"
+  },
+  {
+    "name": "Nơi cấp",
+    "input": "_ctl0:cboNoiCapMST"
+  },
+  {
+    "name": "Ngày vào chính thức",
+    "input": "_ctl0:txtNgayVaoChinhThuc"
+  },
+  {
+    "name": "Loại nhân viên",
+    "input": "_ctl0:cboLoaiNhanVien"
+  },
+  {
+    "name": "Chức danh",
+    "input": "_ctl0:cboLSJobTitleID_Related"
+  },
+  {
+    "name": "Trình độ chuyên môn",
+    "input": "_ctl0:cboTrinhDoChuyenMon"
+  },
+  {
+    "name": "Số di động",
+    "input": "_ctl0:txtSoDiDong"
+  },
+  {
+    "name": "Chức vụ",
+    "input": "_ctl0:cboLSChucVuID"
+  },
+  {
+    "name": "Nơi Làm việc",
+    "input": "_ctl0:cboLocationID"
+  },
+  {
+    "name": "Ghi chú",
+    "input": "_ctl0:txtGhiChuPassport"
+  },
+  {
+    "name": "Ngày vào Công ty",
+    "input": "_ctl0:txtNgayVaoCongTy"
+  },
+  {
+    "name": "Hình thức thay đổi",
+    "input": "_ctl0:cboLSStatusChangeID"
+  },
+  {
+    "name": "Trình độ học vấn",
+    "input": "_ctl0:cboTrinhDoHocVan"
+  },
+  {
+    "name": "Nhóm chấm công",
+    "input": "_ctl0:cboLoaiHinhNhanVien"
+  },
+  {
+    "name": "Local/Expat",
+    "input": "_ctl0:cboNhomNhanVien"
+  },
+  {
+    "name": "Cấp trên gián tiếp",
+    "input": "_ctl0:txtEmpIndirectReport"
+  },
+  {
+    "name": "Số di động",
+    "input": "_ctl0:txtSoDiDong"
+  },
+  {
+    "name": "Email cá nhân",
+    "input": "_ctl0:txtEmail"
+  },
+  {
+    "name": "Email công ty",
+    "input": "_ctl0:txtCompanyEmail"
+  },
+  {
+    "name": "Mã số thuế",
+    "input": "_ctl0:txtMaSoThue"
+  },
+  {
+    "name": "Ngày cấp",
+    "input": "_ctl0:txtNgayCapMST"
+  },
+  {
+    "name": "Nơi cấp",
+    "input": "_ctl0:cboNoiCapMST"
+  },
+  {
+    "name": "Địa chỉ thường trú",
+    "input": "_ctl0:txtDiaChiThuongTru"
+  },
+  {
+    "name": "Địa chỉ tạm trú",
+    "input": "_ctl0:txtDiaChiTamTru"
+  },
+  {
+    "name": "Địa chỉ CMND",
+    "input": "_ctl0:txtDiaChiTamTruEN"
+  },
+  {
+    "name": "Nơi sinh",
+    "input": "_ctl0:txt_NoiSinh"
+  },
+  {
+    "name": "Ghi chú",
+    "input": "_ctl0:txtNoteAdd"
+  }
+];
+let WK_GLOBAL = {};
+$(document).ready(function (e) {
+
+  function to_json(workbook) {
+    var result = {};
+    workbook.SheetNames.forEach(function (sheetName) {
+      var roa = XLSX.utils.sheet_to_row_object_array(workbook.Sheets[sheetName]);
+      if (roa.length > 0) {
+        result[sheetName] = roa;
+      }
+    });
+    return result;
+  }
+
+  function handleFile(e) {
+    var files = e.target.files;
+    var i, f;
+    for (i = 0, f = files[i]; i != files.length; ++i) {
+      var reader = new FileReader();
+      var name = f.name;
+      reader.onload = function (e) {
+        try {
+          var data = $.trim(e.target.result);
+          var workbook = XLSX.read(data, {
+            type: 'binary'
+          });
+          const wkJson = to_json(workbook);
+          WK_GLOBAL = wkJson;
+          fillSheet(wkJson);
+        } catch (e) {
+          alert(e);
+        }
+      };
+      reader.readAsBinaryString(f);
+    }
+  }
+
+  function setData(wk, sheet, stt) {
+    const current = wk[sheet][stt];
+    $('#_ctl0_chkPassport').click();
+    handle(current);
+  }
+
+  function fillSheet(wk) {
+    const arrSheet = Object.keys(wk);
+    $('#sheet').html(arrSheet.map(e => `<option value="${e}">${e}</option>`))
+  }
+
+  $("html")
+    .on('change', '#stt', function () {
+      setData(WK_GLOBAL, $("#sheet").val(), $(this).val())
+    })
+    .on('change', '#file', function (e) {
+      e.preventDefault();
+      handleFile(e);
+    })
+});
+
+function eventFire(el, etype) {
+  if (el.fireEvent) {
+    el.fireEvent('on' + etype);
+  } else {
+    const evObj = document.createEvent('Events');
+    evObj.initEvent(etype, true, false);
+    el.dispatchEvent(evObj);
+  }
+}
+
+function handleSetData(idInput, val) {
+  return new Promise((resolve, reject) => {
+    const idTarget = `${idInput}_DropDown`;
+    const qTarget = `#Form1 .rcbSlide #${idTarget} li`;
+    if ($(qTarget).length > 0) {
+      return resolve(setDataDropdown(qTarget, val));
+    }
+    return $("form").bind("DOMSubtreeModified", function () {
+      $("form").off('DOMSubtreeModified');
+      if ($(qTarget).length > 0) {
+        return resolve(setDataDropdown(qTarget, val));
+      }
+      return resolve(false);
+    });
+  });
+}
+
+function setDataDropdown(qEls, val) {
+  let setSuccessfully = false;
+  $(qEls).each(function () {
+    if ($(this).text() === val) {
+      setSuccessfully = true;
+      $(this).click();
+    }
+  })
+  return setSuccessfully;
+}
+
+async function handle(current) {
+  const arr = Object.keys(current).map(e => {
+    const c = configAddStaff.find(a => a.name.toLocaleLowerCase() === e.toLocaleLowerCase());
+    if (c) {
+      return {
+        input: c.input,
+        value: current[e],
+        dropdown: c.dropdown
+      }
+    }
+    return null;
+  }).filter(e => e);
+  const runFbyAwait = async (index) => {
+    if (index > arr.length - 1) {
+      return;
+    }
+    const currentData = arr[index];
+    if (currentData.dropdown) {
+      await inputDropdown(currentData.input.replace(":", "_"), currentData.value);
+    } else {
+      inputNormal(currentData.input, currentData.value)
+    }
+
+    return runFbyAwait(++index);
+  }
+  return await runFbyAwait(0);
+}
+
+async function inputDropdown(id, val) {
+  eventFire($(`#${id}_Input`)[0], 'focus');
+  console.log("Handle input dropdown " + id + " value: " + val);
+  if (await handleSetData(id, val)) {
+    console.log("Set data successfully")
+  } else {
+    console.log("Unset data")
+  }
+  eventFire($('body')[0], 'click');
+  console.log("\n");
+  return;
+}
+
+function inputNormal(id, val) {
+  return $(`input[name='${id}']`).val(val);
+}
