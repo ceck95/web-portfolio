@@ -18,8 +18,7 @@ loadScript("https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.14.2/xlsx.core.min.js"
 let configAddStaff = [
   {
     "name": "Công ty",
-    "input": "_ctl0:cboCompanyID",
-    dropdown: true
+    "input": "_ctl0:cboCompanyID"
   },
   {
     "name": "Mã nhân viên",
@@ -308,11 +307,15 @@ function handleSetData(idInput, val) {
       return resolve(setDataDropdown(qTarget, val));
     }
     return $("form").bind("DOMSubtreeModified", function () {
-      $("form").off('DOMSubtreeModified');
-      if ($(qTarget).length > 0) {
-        return resolve(setDataDropdown(qTarget, val));
-      }
-      return resolve(false);
+      setTimeout(() => {
+        console.log($(qTarget).length);
+        console.log($(qTarget).html())
+        $("form").off('DOMSubtreeModified');
+        if ($(qTarget).length > 0) {
+          return resolve(setDataDropdown(qTarget, val));
+        }
+        return resolve(false);
+      }, 1000)
     });
   });
 }
