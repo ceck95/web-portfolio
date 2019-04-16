@@ -18,7 +18,8 @@ loadScript("https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.14.2/xlsx.core.min.js"
 let configAddStaff = [
   {
     "name": "Công ty",
-    "input": "_ctl0:cboCompanyID"
+    "input": "_ctl0:cboCompanyID",
+    dropdown: true
   },
   {
     "name": "Mã nhân viên",
